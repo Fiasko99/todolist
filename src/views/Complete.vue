@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1>Home</h1>
-    <todo-form-for-add 
-      @updateData="updateData" />
+    <h1>Complete</h1>
     <todo-list 
       :todoClass="todoClass" 
       @updateData="updateData"
@@ -12,19 +10,18 @@
 
 <script>
 import TodoList from "@/components/TodoList";
-import TodoFormForAdd from "@/components/TodoFormForAdd";
 import axios from "axios";
 
 export default {
-  name: 'Home',
+  name: 'Complete',
   data() {
     return {
       todos: [],
-      todoClass: 'new'
+      todoClass: 'complete'
     }
   },
   components: {
-    TodoList, TodoFormForAdd
+    TodoList
   },
   methods: {
     updateData() {
